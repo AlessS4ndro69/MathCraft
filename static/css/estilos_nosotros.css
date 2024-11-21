@@ -1,4 +1,8 @@
-.nosotros {
-    height: 76.7rem;
-    background-image: url('../imgs/nosotros.png'); /* Ruta de la imagen */
+.cont_imagen{
+    width: 100%;
+}
+
+
+.cont_imagen > img{
+    width: 100%;
 }
