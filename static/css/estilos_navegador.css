@@ -1,5 +1,9 @@
+html{
+    --alto_navegador : 140px;
+}
+
 nav{
-    height:140px;
+    height:var(--alto_navegador);
     width: 100%;
 
     box-sizing: border-box;
@@ -62,31 +66,59 @@ nav.reducida{
             width: auto;
         }
 
-    nav > .enlaces{
+    nav > ul{
         display: flex;
         column-gap: 3.5rem;
         font-weight: var(--fuente_semibold);
         font-size: inherit;
     }
 
-        nav > .enlaces > a{
+    nav > ul > li{
+        display: flex;
+    }
+
+        nav > ul > li > a{
             color: var(--color_blanco);
             position: relative;
             font-size: inherit;
         }
 
-        nav > .enlaces > a > li::before {
-            content: '';
+nav > button{
+    display: none;
+    padding: 1rem;
+    background-color: yellow;
+}
+
+
+@media only screen and (max-width: 1000px){
+    nav{
+        position: relative;
+    }
+
+        nav > ul#menu{
+            column-gap: 2rem;
+            flex-direction: column;
             position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 4px;
-            width: 0;
-            background-color: var(--color_blanco);
-            transition: width 0.3s ease; 
-            font-size: inherit;
+            top:var(--alto_navegador);
+            right:0;
+            height: auto;
         }
-        
-        nav > .enlaces > a > li::before:hover {
-            width: 100%;
+
+            nav > ul#menu > li{
+                width: 100%;
+            }
+
+                nav > ul#menu > li > a{
+                    width: 100%;
+                    padding: 1rem;
+                    border: 1px solid white;
+                }
+
+        nav > button{
+            display: flex;
         }
+
+    #menu{
+        display: none;
+    }
+}
