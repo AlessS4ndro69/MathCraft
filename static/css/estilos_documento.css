@@ -72,6 +72,7 @@
         .contenido > .seccion > .contenido_seccion > .cont_archivo > img{
             width: 100%;
             aspect-ratio: 16/9;
+
             margin-bottom: 0.5rem;
         }
 
