@@ -81,6 +81,13 @@ nav.reducida{
             color: var(--color_blanco);
             position: relative;
             font-size: inherit;
+            
+            padding: 1rem;
+            transition: background-color 0.5s ease;
+        }
+
+        nav > ul > li > a:hover{
+            background-color: var(--color_celeste_1);
         }
 
 nav > button{
@@ -112,6 +119,7 @@ nav > button{
                     width: 100%;
                     padding: 1rem;
                     border: 1px solid white;
+                    color: var(--color_blanco);
                 }
 
         nav > button{
